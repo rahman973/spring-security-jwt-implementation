@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "3765199f-6617-416b-8e41-1d50b0a7c5c0",
+		"name": "java Exam",
+		"description": "for testing bester capital media java exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/authenticate",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"BesterCapitalMedia\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/authenticate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate"
+					]
+				},
+				"description": "to get bearer token"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/employee/update",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJCZXN0ZXJDYXBpdGFsTWVkaWEiLCJleHAiOjE1OTMxNTk2MTksImlhdCI6MTU5MzE0MTYxOX0.B6BFFY1C1S0oSKW60M1uQWpoYSWO0SyQoQpn6nM8ULng6EfdCtjdMWJt3sVsIHmc5Xy4dDW-rbqIQ1ptdG7ujg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n            \"firstName\": \"Ali\",\r\n            \"lastName\": \"hamza\",\r\n            \"dob\": \"1994-06-13\",\r\n            \"hireDate\": \"2020-06-17\",\r\n            \"ssn\": \"35102\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"update"
+					]
+				},
+				"description": "create or update"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/employee/list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJCZXN0ZXJDYXBpdGFsTWVkaWEiLCJleHAiOjE1OTMxNTk2MTksImlhdCI6MTU5MzE0MTYxOX0.B6BFFY1C1S0oSKW60M1uQWpoYSWO0SyQoQpn6nM8ULng6EfdCtjdMWJt3sVsIHmc5Xy4dDW-rbqIQ1ptdG7ujg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n            \"firstName\": \"Ali\",\r\n            \"lastName\": \"hamza\",\r\n            \"dob\": \"1994-06-13\",\r\n            \"hireDate\": \"2020-06-17\",\r\n            \"ssn\": \"35102\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"list"
+					]
+				},
+				"description": "get all employee"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/employee/70",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJCZXN0ZXJDYXBpdGFsTWVkaWEiLCJleHAiOjE1OTMxNTk2MTksImlhdCI6MTU5MzE0MTYxOX0.B6BFFY1C1S0oSKW60M1uQWpoYSWO0SyQoQpn6nM8ULng6EfdCtjdMWJt3sVsIHmc5Xy4dDW-rbqIQ1ptdG7ujg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n            \"firstName\": \"Ali\",\r\n            \"lastName\": \"hamza\",\r\n            \"dob\": \"1994-06-13\",\r\n            \"hireDate\": \"2020-06-17\",\r\n            \"ssn\": \"35102\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/71",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"71"
+					]
+				},
+				"description": "get employee details"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/employee/delete.70",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJCZXN0ZXJDYXBpdGFsTWVkaWEiLCJleHAiOjE1OTMxNTk2MTksImlhdCI6MTU5MzE0MTYxOX0.B6BFFY1C1S0oSKW60M1uQWpoYSWO0SyQoQpn6nM8ULng6EfdCtjdMWJt3sVsIHmc5Xy4dDW-rbqIQ1ptdG7ujg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n            \"firstName\": \"Ali\",\r\n            \"lastName\": \"hamza\",\r\n            \"dob\": \"1994-06-13\",\r\n            \"hireDate\": \"2020-06-17\",\r\n            \"ssn\": \"35102\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/delete/71",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"delete",
+						"71"
+					]
+				},
+				"description": "delete employee"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
